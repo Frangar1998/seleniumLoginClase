@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+	<title>LoginAppHMIS2019</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">registroOk</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://loginapphmis2019jjcanada.azurewebsites.net/<datalist><option>http://loginapphmis2019jjcanada.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>clickAndWait</td><td>link=Register<datalist><option>link=Register</option><option>//a[contains(text(),'Register')]</option><option>//a[contains(@href, '/Account/Register')]</option><option>//ul[2]/li/a</option><option>css=ul.nav.navbar-nav.navbar-right &gt; li &gt; a</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Input_Email<datalist><option>id=Input_Email</option><option>name=Input.Email</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Email'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Create a new account.'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password'])[1]/preceding::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Confirm password'])[1]/preceding::input[2]</option><option>//input[@id='Input_Email']</option><option>//input</option><option>css=#Input_Email</option></datalist></td><td>hola@ual.es</td>
+</tr>
+<tr><td>type</td><td>id=Input_Password<datalist><option>id=Input_Password</option><option>name=Input.Password</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Email'])[1]/following::input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Confirm password'])[1]/preceding::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Register'])[3]/preceding::input[2]</option><option>//input[@id='Input_Password']</option><option>//div[3]/input</option><option>css=#Input_Password</option></datalist></td><td>ABab12!!</td>
+</tr>
+<tr><td>type</td><td>id=Input_ConfirmPassword<datalist><option>id=Input_ConfirmPassword</option><option>name=Input.ConfirmPassword</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Confirm password'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password'])[1]/following::input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Register'])[3]/preceding::input[1]</option><option>//input[@id='Input_ConfirmPassword']</option><option>//div[4]/input</option><option>css=#Input_ConfirmPassword</option></datalist></td><td>ABab12!!</td>
+</tr>
+<tr><td>clickAndWait</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+<tr><td>#</td><td>El test falla porque el usuario hola@hola.es ya se ha registrado en el sistema<datalist><option>El test falla porque el usuario hola@hola.es ya se ha registrado en el sistema</option></datalist></td><td></td>
+</tr>
+<tr><td>assertElementPresent</td><td>link=Hello hola@ual.es!<datalist><option>link=Hello hola@ual.es!</option><option>link=Hola hola@ual.es!</option></datalist></td><td></td>
+</tr>
+<tr><td>clickAndWait</td><td>//form[@id='logoutForm']/ul/li[2]/button<datalist><option>//form[@id='logoutForm']/ul/li[2]/button</option><option>//button[@type='submit']</option><option>//li[2]/button</option><option>css=button.btn.btn-link.navbar-btn.navbar-link</option></datalist></td><td></td>
+</tr>
+<tr><td>assertElementPresent</td><td>link=Log in<datalist><option>link=Log in</option><option>//a[contains(text(),'Log in')]</option><option>//a[contains(@href, '/Account/Login')]</option><option>//ul[2]/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>link=Log in<datalist><option>link=Log in</option><option>//a[contains(text(),'Log in')]</option><option>//a[contains(@href, '/Account/Login')]</option><option>//ul[2]/li[2]/a</option></datalist></td><td>Log in</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">loginok</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://loginapphmis2019jjcanada.azurewebsites.net/<datalist><option>http://loginapphmis2019jjcanada.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Log in<datalist><option>link=Log in</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Register'])[1]/following::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Contact'])[1]/following::a[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Learn More'])[1]/preceding::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Learn More'])[2]/preceding::a[2]</option><option>//a[contains(text(),'Log in')]</option><option>//a[contains(@href, '/Account/Login')]</option><option>//ul[2]/li[2]/a</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>id=Input_Email<datalist><option>id=Input_Email</option><option>name=Input.Email</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Email'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Use a local account to log in.'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password'])[1]/preceding::input[1]</option><option>//input[@id='Input_Email']</option><option>//input</option><option>css=#Input_Email</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Input_Email<datalist><option>id=Input_Email</option><option>name=Input.Email</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Email'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Use a local account to log in.'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password'])[1]/preceding::input[1]</option><option>//input[@id='Input_Email']</option><option>//input</option><option>css=#Input_Email</option></datalist></td><td>hola2019@hola.com</td>
+</tr>
+<tr><td>type</td><td>id=Input_Password<datalist><option>id=Input_Password</option><option>name=Input.Password</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Email'])[1]/following::input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Log in'])[3]/preceding::input[2]</option><option>//input[@id='Input_Password']</option><option>//div[3]/input</option><option>css=#Input_Password</option></datalist></td><td>1234qwerQWER/</td>
+</tr>
+<tr><td>click</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password'])[1]/following::button[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password'])[1]/following::button[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Forgot your password?'])[1]/preceding::button[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Register as a new user'])[1]/preceding::button[1]</option><option>//button[@type='submit']</option><option>//div[5]/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>link=Hello hola2019@hola.com!<datalist><option>link=Hello hola2019@hola.com!</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Contact'])[1]/following::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='About'])[1]/following::a[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Log out'])[1]/preceding::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Learn More'])[1]/preceding::a[1]</option><option>//a[contains(text(),'Hello hola2019@hola.com!')]</option><option>//form[@id='logoutForm']/ul/li/a</option><option>//a[contains(@href, '/Account/Manage')]</option><option>//form/ul/li/a</option><option>css=a[title="Manage"]</option></datalist></td><td>Hello hola2019@hola.com!</td>
+</tr>
+<tr><td>click</td><td>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Hello hola2019@hola.com!'])[1]/following::button[1]<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Hello hola2019@hola.com!'])[1]/following::button[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Contact'])[1]/following::button[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Learn More'])[1]/preceding::button[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Learn More'])[2]/preceding::button[1]</option><option>//button[@type='submit']</option><option>//form[@id='logoutForm']/ul/li[2]/button</option><option>//li[2]/button</option><option>css=button.btn.btn-link.navbar-btn.navbar-link</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>link=Log in<datalist><option>link=Log in</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Register'])[1]/following::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Contact'])[1]/following::a[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Learn More'])[1]/preceding::a[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Learn More'])[2]/preceding::a[2]</option><option>//a[contains(text(),'Log in')]</option><option>//a[contains(@href, '/Account/Login')]</option><option>//ul[2]/li[2]/a</option></datalist></td><td>Log in</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">registroKoYaExiste</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://loginapphmis2019jjcanada.azurewebsites.net/<datalist><option>http://loginapphmis2019jjcanada.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Register<datalist><option>link=Register</option><option>//a[contains(text(),'Register')]</option><option>//a[contains(@href, '/Account/Register')]</option><option>//ul[2]/li/a</option><option>css=ul.nav.navbar-nav.navbar-right &gt; li &gt; a</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Input_Email<datalist><option>id=Input_Email</option><option>name=Input.Email</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Email'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Create a new account.'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password'])[1]/preceding::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Confirm password'])[1]/preceding::input[2]</option><option>//input[@id='Input_Email']</option><option>//input</option><option>css=#Input_Email</option></datalist></td><td>hola@ual.es</td>
+</tr>
+<tr><td>type</td><td>id=Input_Password<datalist><option>id=Input_Password</option><option>name=Input.Password</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Email'])[1]/following::input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Confirm password'])[1]/preceding::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Register'])[3]/preceding::input[2]</option><option>//input[@id='Input_Password']</option><option>//div[3]/input</option><option>css=#Input_Password</option></datalist></td><td>ABab12!!</td>
+</tr>
+<tr><td>type</td><td>id=Input_ConfirmPassword<datalist><option>id=Input_ConfirmPassword</option><option>name=Input.ConfirmPassword</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Confirm password'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password'])[1]/following::input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Register'])[3]/preceding::input[1]</option><option>//input[@id='Input_ConfirmPassword']</option><option>//div[4]/input</option><option>css=#Input_ConfirmPassword</option></datalist></td><td>ABab12!!</td>
+</tr>
+<tr><td>clickAndWait</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>css=div.text-danger.validation-summary-errors &gt; ul &gt; li<datalist><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Create a new account.'])[1]/following::li[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Register'])[2]/following::li[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Email'])[1]/preceding::li[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password'])[1]/preceding::li[1]</option><option>//form/div/ul/li</option><option>css=div.text-danger.validation-summary-errors &gt; ul &gt; li</option></datalist></td><td>User name 'hola@ual.es' is already taken.</td>
+</tr>
+<tr><td>assertText</td><td>link=Log in<datalist><option>link=Log in</option><option>//a[contains(text(),'Log in')]</option><option>//a[contains(@href, '/Account/Login')]</option><option>//ul[2]/li[2]/a</option></datalist></td><td>Log in</td>
+</tr>
+</tbody></table>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">registroRandom</td></tr>
+</thead>
+<tbody>
+<tr><td>open</td><td>http://loginapphmis2019jjcanada.azurewebsites.net/<datalist><option>http://loginapphmis2019jjcanada.azurewebsites.net/</option></datalist></td><td></td>
+</tr>
+<tr><td>click</td><td>link=Register<datalist><option>link=Register</option><option>//a[contains(text(),'Register')]</option><option>//a[contains(@href, '/Account/Register')]</option><option>//ul[2]/li/a</option><option>css=ul.nav.navbar-nav.navbar-right &gt; li &gt; a</option></datalist></td><td></td>
+</tr>
+<tr><td>storeExpression</td><td>javascript{"ual" + Math.floor(Math.random()*1500000) + "@ual.es";}<datalist><option>javascript{"ual" + Math.floor(Math.random()*1500000) + "@ual.es";}</option></datalist></td><td>emailrandom</td>
+</tr>
+<tr><td>echo</td><td>${emailrandom}<datalist><option>${emailrandom}</option></datalist></td><td></td>
+</tr>
+<tr><td>type</td><td>id=Input_Email<datalist><option>id=Input_Email</option><option>name=Input.Email</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Email'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Create a new account.'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password'])[1]/preceding::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Confirm password'])[1]/preceding::input[2]</option><option>//input[@id='Input_Email']</option><option>//input</option><option>css=#Input_Email</option></datalist></td><td>${emailrandom}</td>
+</tr>
+<tr><td>type</td><td>id=Input_Password<datalist><option>id=Input_Password</option><option>name=Input.Password</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Email'])[1]/following::input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Confirm password'])[1]/preceding::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Register'])[3]/preceding::input[2]</option><option>//input[@id='Input_Password']</option><option>//div[3]/input</option><option>css=#Input_Password</option></datalist></td><td>ABab12!!</td>
+</tr>
+<tr><td>type</td><td>id=Input_ConfirmPassword<datalist><option>id=Input_ConfirmPassword</option><option>name=Input.ConfirmPassword</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Confirm password'])[1]/following::input[1]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Password'])[1]/following::input[2]</option><option>xpath=(.//*[normalize-space(text()) and normalize-space(.)='Register'])[3]/preceding::input[1]</option><option>//input[@id='Input_ConfirmPassword']</option><option>//div[4]/input</option><option>css=#Input_ConfirmPassword</option></datalist></td><td>ABab12!!</td>
+</tr>
+<tr><td>clickAndWait</td><td>//button[@type='submit']<datalist><option>//button[@type='submit']</option><option>//form/button</option><option>css=button.btn.btn-default</option></datalist></td><td></td>
+</tr>
+<tr><td>assertElementPresent</td><td>link=Hello ${emailrandom}!<datalist><option>link=Hello ${emailrandom}!</option><option>link=Hola ${emailrandom}!</option></datalist></td><td></td>
+</tr>
+<tr><td>clickAndWait</td><td>//form[@id='logoutForm']/ul/li[2]/button<datalist><option>//form[@id='logoutForm']/ul/li[2]/button</option><option>//button[@type='submit']</option><option>//li[2]/button</option><option>css=button.btn.btn-link.navbar-btn.navbar-link</option></datalist></td><td></td>
+</tr>
+<tr><td>assertText</td><td>link=Log in<datalist><option>link=Log in</option><option>//a[contains(text(),'Log in')]</option><option>//a[contains(@href, '/Account/Login')]</option><option>//ul[2]/li[2]/a</option></datalist></td><td>Log in</td>
+</tr>
+</tbody></table>
+</body>
+</html>
